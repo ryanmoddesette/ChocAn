@@ -14,7 +14,7 @@ import java.text.DateFormat;
 /**
  * The Disk Class for saving Data, getting records by serviceCode, and displaying the weekly summary.
  * 
- * @author Rediat Shamsu
+ * 
  * @version 1.0
  */
 public class Disk {
