@@ -9,7 +9,7 @@ import java.util.*;
  * The ProviderDirectory class. Holds the provider directory and displays the provider directory.
  * Checks to ensure the service code is in the provider directory and returns the fee for a service code
  * 
- * @author Shelby Deerman
+ * 
  * @version 1.0 
  */
 public class ProviderDirectory {
