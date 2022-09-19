@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * The ManagerMenu class. This class allows managers to print different reports, run the main accounting procedure, or log out
  * 
- * @author Eleri Floyd
+ * 
  * @version 1.0
  */
 public class ManagerMenu {
