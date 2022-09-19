@@ -9,7 +9,7 @@ import src.Member.memberStatus;
 /**
  * The Provider Menu Class allows the user to choose provider director, validate member, bill Chocan, or log out.
  * 
- * @author Summer Davis
+ * 
  * @version 1.0
  */
 public class ProviderMenu {
