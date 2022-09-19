@@ -1,0 +1,260 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>1</zoom_level><help_text>Space for diagram notes
+</help_text><element><id>UMLClass</id><coordinates><x>242</x><y>220</y><w>59</w><h>32</h></coordinates><panel_attributes>*Member*
+--
+-name : str
+-memberAccountNumber : int
+-address : str
+-city : str
+-state : str
+-zipCode : int
+-memberServiceList : Vector&lt;ServiceMember&gt;
+-memberStatus : enum
+--
++Member(name : str, memberAccountNumber : int, address : str, city : str, state : str, zipCode : int)
++getName() : str
++getMemberAccountNumber() : int
++getAddress() : str
++getCity() : str
++getState() : str
++getZipCode : int
++enterMemberInfo(newAccountNumber : int) : void
++getMemberStatus() : memberStatus
++displayMemberStatus() : void
++addServiceToMember(serviceCode : int, serviceName : str, providerNum : int, memberNum : int) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>197</y><w>23</w><h>6</h></coordinates><panel_attributes>*ManagerReport*
+--
++requestSummaryReport() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>205</y><w>17</w><h>7</h></coordinates><panel_attributes>*ProviderReport*
+--
++providerWriter : FileWriter
+--
++printProviderReport() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>213</y><w>22</w><h>7</h></coordinates><panel_attributes>*MemberReport*
+--
++memberWriter : FileWriter
+--
++printMemberReport : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>437</x><y>204</y><w>48</w><h>15</h></coordinates><panel_attributes>*Reports*
+--
++signalProviderReport(providerAccountNumber : int) : void
++signalMemberReport(memberAccountNumber : int) : void
++signalManagerReport() : void
++signalEFTReport() : void
++signalAllReport(memberAccountNumber : int, providerAccountNumber : int) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>242</x><y>183</y><w>59</w><h>33</h></coordinates><panel_attributes>*Provider*
+--
+-name : str
+-accNumber : int
+-address: str
+-city : str
+-state : str
+-zipCode : int
+-numberOfConsultations : int 
+-fee : double
+--
++Provider(name : str, accNumber : int, address : str, city : str, state : str, zipCode : int, fee : double)
++getName() : str
++getAccountNumber() : int
++getAddress() : str
++getCity() : str
++getState() : str
++getZipCode() : int
++getFee() : double
++servicesCompleted(serviceCode : int, providerNum : int, memberNum : int) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>354</x><y>234</y><w>29</w><h>28</h></coordinates><panel_attributes>*ProviderMenu*
+--
++memberNameHolder : str
++memberNumberHolder : int
++providerNumberHolder : int
++loginFlag : bool
++providerName : str
+-directory : ProviderDirectory
+-billing : BillingInfo
+-memberNumber : int
+-memberFiles : MemberFiles
+-menu : Menu
+--
++selectProviderDirectory() : void
++submitDirectoryRequest() : void        
++promptMemberInfo() : void
++selectBillingOption() : void
++logOut() : void
++main() : void
+                </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>354</x><y>205</y><w>28</w><h>21</h></coordinates><panel_attributes>*Main*
+--
+-message : str
+-message2 : str
+--
++Main()
++isValidEmail(email : str) : bool
++hasUpper(password : str) : bool
++hasSpec(password : str) : bool
++isValidPassword(password : str) : bool
++enterCredentials() : void
+-runInteractiveMode() : void
+-isDay() : bool
++Main (args : str) : void
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>309</x><y>234</y><w>34</w><h>10</h></coordinates><panel_attributes>*MemberFiles*
+--
++insertMember(name : str, accNumber : int, address : str,
+ city : str, state : str, zipCode : int) : void
++searchMember(accNumber : int) : Member
++removeMember(accNumber : int) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>347</x><y>273</y><w>38</w><h>23</h></coordinates><panel_attributes>*BillingInfo*
+--
+-dateOfService : Date
+-serviceCode : int
+-comment : str
+--
++enterServiceDate(date : Date) : void
++enterServiceCode() : void
++callProviderDirectory() : void
++displayServiceName(serviceCode : int) : void
++verifyServiceCode() : Boolean
++enterServiceComments() : void
++displayFee() : void
++verifyFee(serviceCode : int, dateOfService : int) : </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>497</x><y>234</y><w>37</w><h>34</h></coordinates><panel_attributes>*Disk*
+--
+-dateOfService : Date
+-currDate : Date
+-time : Time
+-providerNumber : int
+-memberNumber : int
+-serviceCode : int
+-comment : str
+--
++saveData(dateOfService : Date, serviceCode : int, comment : str)
++getActivityStatus() : void
++writeEFTData() : void
++getweeklySummary() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>306</x><y>277</y><w>24</w><h>15</h></coordinates><panel_attributes>*ProviderDirectory*
+--
+-nameOfService : str
+-serviceCode : int
+-fee : int
+--
++sendEmailAttachment() : void
++displayProviderDirectory() : void
++checkServiceCode(serviceCode : int) : str
++lookUpFee(serviceCode : int) : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>308</x><y>206</y><w>36</w><h>20</h></coordinates><panel_attributes>*OperatorMenu*
+--
++runInteractiveMode() : void
++logOut() : void
++findMem(number : int) : Member
++findProvider(number : int) : Provider
++addMem() : void
++addProvider() : void
++editMem(accNumber : int) : void
++editProvider(accountNumber : int) : void
++removeMem(number : int) : void
++removeProvider(accountNumber : int) : void
++main() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>401</x><y>209</y><w>21</w><h>10</h></coordinates><panel_attributes>*ManagerMenu*
+--
++mScan : Scanner
+--
++selectPrintReports() : void
++logOut() : void
++main() : void
+                </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>343</x><y>213</y><w>13</w><h>5</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+1                       
+                1</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>484</x><y>209</y><w>15</w><h>5</h></coordinates><panel_attributes>lt=&lt;&lt;-
+1                          
+                             1..*</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLSyncBarVertical</id><coordinates><x>496</x><y>198</y><w>2</w><h>26</h></coordinates><panel_attributes>template=txt
+title=titletext
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>197</y><w>10</w><h>3</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>474</x><y>203</y><w>10</w><h>3</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>216</y><w>10</w><h>3</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>221</y><w>22</w><h>6</h></coordinates><panel_attributes>*EFTReport*
+--
++printEFTReport : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>223</y><w>10</w><h>3</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>309</x><y>189</y><w>36</w><h>9</h></coordinates><panel_attributes>*ProviderFiles*
+--
++insertProvider(name : str, accNumber : int, address : str, 
+city : str, state : str, zipCode : int) : void
++searchProvider(accNumber : int) : Provider
++removeProvider(accNumber : int) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>308</x><y>309</y><w>54</w><h>23</h></coordinates><panel_attributes>*ServiceMember*
+--
+-currentDateAndTime : str
+-dateOfService : str
+-providerNumber : int
+-providerName : str
+-memberNum : int
+-serviceCode : int
+-consultationsCompleted : int
+-serviceName : str
+-comments : str
+-fee : int
+--
++ServiceMember(currentDateAndTime : str, dateOfService2 : str, providerNumber : int,
+ providerName : str, memberNum : int, serviceCode : int, serviceName : str, comments : str)
+                </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>372</x><y>309</y><w>53</w><h>23</h></coordinates><panel_attributes>*ServiceProvider*
+--
+-currentDateAndTime : str
+-dateOfService : str
+-providerNumber : int
+-providerName : str
+-memberNum : int
+-memberName : str
+-serviceCode : int
+-consultations : int
+-fee : int
+--
++ServiceProvider(currentDateAndTime : str, dateOfService2 : str, providerNumber : int,
+ providerName : str, memberNum : int, serviceCode : int, consultations : int, fee : int)
+                </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>381</x><y>213</y><w>22</w><h>5</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+1                       
+                1</panel_attributes><additional_attributes>10;20;200;20</additional_attributes></element><element><id>Relation</id><coordinates><x>368</x><y>225</y><w>11</w><h>11</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+1                       
+                1</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>421</x><y>212</y><w>18</w><h>5</h></coordinates><panel_attributes>lt=&lt;&lt;-
+1                          
+                             1..*</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>367</x><y>261</y><w>11</w><h>14</h></coordinates><panel_attributes>lt=&lt;&lt;-
+  1 
+
+
+
+
+                         
+  1</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>329</x><y>283</y><w>20</w><h>5</h></coordinates><panel_attributes>lt=&lt;&lt;-
+  1                                          1    
+</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>324</x><y>225</y><w>10</w><h>11</h></coordinates><panel_attributes>lt=&lt;&lt;-
+  1 
+
+                       
+  0...*</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>325</x><y>197</y><w>10</w><h>11</h></coordinates><panel_attributes>lt=&lt;&lt;-
+  0...*
+
+                       
+  1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>342</x><y>237</y><w>14</w><h>4</h></coordinates><panel_attributes>lt=&lt;&lt;-
+1                       1</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>221</y><w>10</w><h>4</h></coordinates><panel_attributes>lt=&lt;&lt;-
+ 0...*    1  </panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>207</y><w>10</w><h>4</h></coordinates><panel_attributes>lt=&lt;&lt;-
+ 0...*     1  </panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>276</x><y>251</y><w>73</w><h>26</h></coordinates><panel_attributes>lt=&lt;&lt;-
+                                                                   0...*                                                                                                                                        1  </panel_attributes><additional_attributes>710;240;190;240;190;10</additional_attributes></element><element><id>Relation</id><coordinates><x>348</x><y>295</y><w>5</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-
+
+1    
+
+
+
+
+
+1
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>382</x><y>295</y><w>5</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-
+
+1    
+
+
+
+
+
+1
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>514</x><y>226</y><w>4</w><h>10</h></coordinates><panel_attributes>lt=&lt;&lt;-
+1
+
+
+1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>227</x><y>173</y><w>140</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;-
+</panel_attributes><additional_attributes>1380;320;1380;20;10;20;10;520;150;520</additional_attributes></element><element><id>Relation</id><coordinates><x>344</x><y>190</y><w>61</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;-
+</panel_attributes><additional_attributes>590;190;590;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>172</y><w>168</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;-
+</panel_attributes><additional_attributes>10;330;10;30;1660;20;1660;370;1510;370</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>208</y><w>10</w><h>3</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>184</y><w>61</w><h>23</h></coordinates><panel_attributes>lt=&lt;&lt;-
+</panel_attributes><additional_attributes>590;210;590;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>218</y><w>69</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-
+</panel_attributes><additional_attributes>670;10;670;480;10;480;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>161</y><w>228</w><h>38</h></coordinates><panel_attributes>lt=&lt;&lt;-
+</panel_attributes><additional_attributes>2260;360;2260;20;10;30;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>237</y><w>11</w><h>4</h></coordinates><panel_attributes>lt=&lt;&lt;-
+ 1              1</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>191</y><w>11</w><h>4</h></coordinates><panel_attributes>lt=&lt;&lt;-
+ 1              1</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>272</x><y>251</y><w>38</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-
+
+</panel_attributes><additional_attributes>10;10;10;680;360;680</additional_attributes></element><element><id>Relation</id><coordinates><x>334</x><y>216</y><w>218</w><h>122</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>1920;10;2160;10;2160;1200;10;1200;10;1160</additional_attributes></element><element><id>Relation</id><coordinates><x>265</x><y>214</y><w>292</w><h>131</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>2610;10;2900;10;2900;1290;10;1290;10;380</additional_attributes></element><element><id>Relation</id><coordinates><x>233</x><y>202</y><w>155</w><h>151</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10;10;1490;1530;1490;1530;1290</additional_attributes></element></diagram>
