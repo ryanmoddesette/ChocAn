@@ -3,9 +3,9 @@ package src;
 import java.io.FileWriter;
 import java.io.IOException;
 /**
- * This is the report that the member would recieve by email from the provider
+ * This is the report that the member would receive by email from the provider
  * 
- * @author Jacob Carney
+ * 
  * @version 1.0
  */
 public class MemberReport {
