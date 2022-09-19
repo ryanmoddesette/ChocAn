@@ -2,7 +2,7 @@ package src;
 /**
  * HashMapInitialize class, initializes hashmap and inserts a few members and providers to show operation of code
  * 
- * @author Summer Davis
+ * 
  * @version 1.0
  */
 
