@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * This is the Main class. This allows the user to enter an email, password, occupation/position. The Main class also enables main accounting procedure to take place.
  * 
- * @author Summer Davis
+ * 
  * @version 1.0
  */
 
