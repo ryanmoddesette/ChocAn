@@ -3,7 +3,7 @@ package src;
 /**
  * The ServiceProvider class encapsulates a service that being done by a provider and holds all relevant information relating to that
  * 
- * @author Rediat Shamsu
+ * 
  * @version 1.0
  */
 
