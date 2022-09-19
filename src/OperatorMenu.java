@@ -6,7 +6,7 @@ import src.Member.memberStatus;
 /**
  * The OperatorMenu class. This class allows operators to log out or run interactive mode
  * 
- * @author Eleri Floyd
+ * 
  * @version 1.0
  */
 public class OperatorMenu {
