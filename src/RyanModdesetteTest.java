@@ -1,5 +1,5 @@
 package src;
-
+//Junit testing for a couple classes used in the project
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
