@@ -7,7 +7,7 @@ import java.util.Vector;
 /**
  * The Provider class, this constructs and holds all information and functionality related to a singular provider
  * 
- * @author Ryan Moddesette
+ * 
  * @version 1.0
  */
 
