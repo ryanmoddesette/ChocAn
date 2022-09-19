@@ -7,7 +7,7 @@ import java.util.Map;
  * The Manager Report class creates a summary report for the manager
  * to look at when requested
  * 
- * @author Jacob Carney
+ * 
  * @version 1.0
  */
 public class ManagerReport {
