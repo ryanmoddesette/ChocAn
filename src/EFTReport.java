@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * The EFTReport class, this class writes an EFT report to the disk pertaining to the costs and services within the provider files
  * 
- * @author Rediat Shamsu
+ * 
  * @version 1.0
  */
 
