@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * The ProviderFiles class. This creates and stores a hash map to store all members and their data.
  * 
- * @author Eleri Floyd
+ * 
  * @version 1.0
  */
 public class ProviderFiles {
