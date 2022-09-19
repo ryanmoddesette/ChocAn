@@ -2,7 +2,7 @@ package src;
 /**
  * Reports class directs which report should be printed using signaling.
  * 
- * @author Jacob Carney
+ * 
  * @version 1.0
  */
 public class Reports{
