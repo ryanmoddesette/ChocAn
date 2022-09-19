@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
  * This prints the report for provider
  * 
- * @author Jacob Carney
+ * 
  * @version 1.0
  */
 public class ProviderReport {
