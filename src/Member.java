@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * The Member class, this constructs and holds all information and functionality related to a singular member
  * 
- * @author Ryan Moddesette
+ * 
  * @version 1.0
  */
 
