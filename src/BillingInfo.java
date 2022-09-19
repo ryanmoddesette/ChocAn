@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 /**
  * The BillingInfo class. This class allows the provider to bill ChocAn when they choose "Bill ChocAn" from the Provider Menu
  * 
- * @author Shelby Deerman
+ * 
  * @version 1.0
  */
 public class BillingInfo {
