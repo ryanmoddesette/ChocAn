@@ -3,7 +3,7 @@ package src;
 /**
  * The ServiceMember class encapsulates a service that is done for a member and holds all relevant information relating to that
  * 
- * @author Ryan Moddesette
+ * 
  * @version 1.0
  */
 
